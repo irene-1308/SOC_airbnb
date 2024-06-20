@@ -1,0 +1,8 @@
+body {
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template: 1fr 1fr 5fr 2fr 1fr / 1fr 1fr 1fr;
+    column-gap: 100px;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+}
