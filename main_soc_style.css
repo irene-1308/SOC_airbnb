@@ -1,0 +1,354 @@
+body {
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template: 1fr 1fr 5fr 2fr 1fr / 1fr 1fr 1fr;
+    column-gap: 100px;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+}
+
+/* This is the top search bar */
+
+.section1 {
+    grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    grid-template: 1fr / repeat(7, 1fr); 
+    height: 50px;
+}
+
+.search-container {
+    grid-column: 1 / 7;
+    height: 25px;
+    width: 270px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 10px 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    left: 10px;
+    
+}
+
+.mag_glass {
+    grid-column: 1 / 2;
+    width: 20px;
+    height: 20px;
+    align-content: start;
+    color:rgb(118, 118, 118);
+    }
+
+.search-input {
+    border: none;
+    outline: none;
+    font-size: 11px;
+    align-content: start;
+    grid-column: 2 / 7;
+    position: relative;
+    top: -7px;
+    left: 14px;
+
+}
+
+.search-details {
+    grid-column: 2 / 7;
+    align-content: start;
+    display: inline-block;
+    color: #6b6b6b;
+    font-size: 9px;
+    position: relative;
+    top: -12px;
+    left: 37px;
+}
+
+.search-details span {
+    margin: 0 5px;
+}
+
+.filter-button {
+    grid-column-start: 7;
+    grid-row-start: 1;
+    width: 20px;
+    height: 20px;
+    border-radius: 55px;
+    border-color: #333333;
+    border-width: 1px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* This is the top slider (category) bar */
+
+
+.section2 {
+    grid-area: 2 / 2 / 3 / 3 ;
+    display: grid;
+    grid-template: 80% 20% / repeat(5, 2fr), 1fr;
+    height: 40px;
+    align-content: stretch;
+    justify-items: center;
+    position: relative;
+    top: -20px;
+}
+
+.beachfront {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+.disc_beach {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.icons {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.disc_icons {
+    grid-area: 2 / 2 / 2 / 3;
+}
+
+.cabins {
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+.disc_cabins {
+    grid-area: 2 / 3 / 2 / 4;
+}
+
+.pools {
+    grid-column-start: 4;
+    grid-row-start: 1;
+}
+
+.disc_pools {
+    grid-area: 2 / 4 / 2 / 5;
+    left: -10px;
+}
+
+.castles {
+    grid-column-start: 5;
+    grid-row-start: 1;
+
+}
+
+.disc_castles {
+    grid-area: 2 / 5 / 2 / 6;
+}
+
+.beachfront, .icons, .cabins, .pools, .castles {
+    width: 35px;
+    height: 35px; 
+    position: relative; 
+    top: 10px;
+}
+
+.disc_cabins, .disc_icons, .disc_pools, .disc_castles, .disc_beach {
+    font-size: 10px;
+    font-weight: normal;
+}
+
+.rectangle {
+    height: 3px;
+    width: 60px;
+    background-color: #818080;
+    position: relative;
+}
+
+/* This is the main stay photo section */
+
+.section3 {
+    grid-area: 3 / 2 / 4 / 3;
+    display: grid;
+    grid-template: repeat(6, 1fr) / repeat(8, 1fr);
+    align-items: center;
+}
+
+.main {
+    grid-area: 1 / 1 / 7 / 9;
+    height: 328px;
+    width: 378px;
+    border-radius: 8%;
+    padding-top: 15px;
+    align-self: center; 
+    justify-self: center;
+}
+
+.favourite {
+    grid-area: 3 / 7 / 3 / 9;
+    padding: 5px;
+    height: 25px;
+    width: 25px;
+    z-index: 1;
+    justify-self: center;
+    align-self: start;
+    padding-top: 30px;
+}
+
+.slider {
+    grid-area: 6 / 4 / 7 / 6;
+    padding: 5px;
+    z-index: 2;
+    height: 35px;
+    width: 45px;
+    justify-self: center;
+    align-self: end;
+}
+
+.guest {
+    background-color:rgba(255, 255, 255, 0.841);
+    color: black;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    align-self: start;
+}
+   
+.guest-container {
+    grid-area: 1 / 1 / 3 / 4;
+    z-index: 3;
+    justify-self: start;
+    align-self: start;
+    padding-top: 20px;
+    padding-left: 30px;
+
+}
+
+/* This is the main stay info section */
+
+.section4 {
+    grid-area: 4 / 2 / 5 / 2;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    height: 50px;
+    align-items: start;
+}
+
+.location, .info, .price, .area {
+    grid-column: 1 / 2;
+    align-self: start;
+    justify-self: start;
+    font-size: 13px;
+    padding-left: 15px;
+    position: relative;
+    left: 1px;
+}
+
+.location {
+    font-weight: bold;
+}
+
+.info, .area {
+    font-weight: lighter;
+    color: #6b6b6b;
+}
+
+.price {
+    text-decoration: underline;
+    align-self: end;
+}
+
+.star {
+    height: 15px;
+    width: 15px;
+    align-self: start;
+}
+
+.fns {
+    font-weight: lighter;
+    font-size: 12px;
+    position: relative;
+    top: -3px;
+}
+
+.rating {
+    grid-column: 2 / 3;
+    position: relative;
+    justify-self: end;
+    padding-right: 20px;
+    top: -65px;
+}
+
+.second {
+    justify-self: center;
+    align-self: end;
+    width: 378px;
+    grid-column: 1 / 3;
+    position: relative;
+    top: 20px;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+    padding-bottom: 0%;
+}
+
+/* This is the bottom menu section */
+
+.section5 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    display: grid;
+    grid-template: 80% 20% / repeat(5, 1fr);
+    height: 40px;
+    align-content: stretch;
+    justify-items: center;
+    position: relative;
+    border-top: 1px solid rgb(195, 193, 193);
+}
+
+.explore {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    width: 25px;
+    height: 25px; 
+    position: relative; 
+    top: 10px;
+}
+
+.disc_explore {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.wishlists {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    width: 25px;
+    height: 25px; 
+    position: relative; 
+    top: 10px;
+ } 
+
+ .disc_wish {
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.login {
+    grid-column-start: 4;
+    grid-row-start: 1;
+    width: 25px;
+    height: 25px; 
+    position: relative; 
+    top: 10px;
+ } 
+
+ .disc_login {
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
+
+ .disc_wish, .disc_explore, .disc_login {
+    font-size: 10px;
+    font-weight: normal;
+    position: relative; 
+    top: -5px;
+ }
+ 
