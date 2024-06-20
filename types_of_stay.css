@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template: 1fr 1fr 5fr 2fr 1fr / 1fr 1fr 1fr;
+    column-gap: 100px;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+}
+
+/* This is the top search bar */
+
+.section1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: grid;
+    grid-template: 1fr / repeat(7, 1fr); 
+    height: 50px;
+}
+
+.search-container {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    height: 25px;
+    width: 270px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    left: 10px;
+}
+
+.mag_glass {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 20px;
+    height: 20px;
+    align-content: start;
+    color:rgb(118, 118, 118);
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    font-size: 11px;
+    align-content: start;
+    grid-column-start: 2;
+    grid-column-end: 7;
+    position: relative;
+    top: -7px;
+    left: 14px;
+}
+
+.search-details {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    align-content: start;
+    display: inline-block;
+    color: #6b6b6b;
+    font-size: 9px;
+    position: relative;
+    top: -12px;
+    left: 37px;
+}
+
+.search-details span {
+    margin: 0 5px;
+}
+
+.filter-button {
+    grid-column-start: 7;
+    grid-row-start: 1;
+    width: 20px;
+    height: 20px;
+    border-radius: 55px;
+    border-color: #333333;
+    border-width: 1px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* This is the top slider (category) bar */
+
+
+.section2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template: 80% 20% / repeat(5, 2fr), 1fr;
+    height: 40px;
+    align-content: stretch;
+    justify-items: center;
+    position: relative;
+    top: -20px;
+}
+
+.beachfront {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+.disc_beach {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.icons {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.disc_icons {
+    grid-area: 2 / 2 / 2 / 3;
+}
+
+.cabins {
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+.disc_cabins {
+    grid-area: 2 / 3 / 2 / 4;
+}
+
+.pools {
+    grid-column-start: 4;
+    grid-row-start: 1;
+}
+
+.disc_pools {
+    grid-area: 2 / 4 / 2 / 5;
+    left: -10px;
+}
+
+.castles {
+    grid-column-start: 5;
+    grid-row-start: 1;
+}
+
+.disc_castles {
+    grid-area: 2 / 5 / 2 / 6;
+}
+
+.beachfront, .icons, .cabins, .pools, .castles {
+    width: 35px;
+    height: 35px; 
+    position: relative; 
+    top: 10px;
+}
+
+.disc_cabins, .disc_icons, .disc_pools, .disc_castles, .disc_beach {
+    font-size: 10px;
+    font-weight: normal;
+}
+
+.rectangle {
+    height: 3px;
+    width: 60px;
+    background-color: #818080;
+    position: relative;
+}
